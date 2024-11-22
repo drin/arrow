@@ -206,6 +206,7 @@ takes precedence over ccache if a storage backend is configured" ON)
                 "Build Arrow libraries with install_name set to @rpath" ON)
 
   define_option(ARROW_GGDB_DEBUG "Pass -ggdb flag to debug builds" ON)
+  define_option(NAME_ADD_BUILDTYPE "Appends buildtype to library names" OFF)
 
   define_option(ARROW_WITH_MUSL "Whether the system libc is musl or not" OFF)
 
