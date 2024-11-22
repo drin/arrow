@@ -261,6 +261,10 @@ function(ADD_ARROW_LIB LIB_NAME)
     set(USE_OBJLIB ON)
   endif()
 
+  if(NAME_WITH_BUILDTYPE)
+    set(LIB_NAME ${LIB_NAME}-${CMAKE_BUILD_TYPE})
+  endif()
+
   if(USE_OBJLIB)
     # Generate a single "objlib" from all C++ modules and link
     # that "objlib" into each library kind, to avoid compiling twice
